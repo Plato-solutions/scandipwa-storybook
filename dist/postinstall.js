@@ -1,5 +1,7 @@
 "use strict";
 
+/* eslint-disable max-len */
+
 /* eslint-disable no-throw-literal */
 
 /* eslint-disable no-useless-catch */
@@ -16,10 +18,6 @@
 const fs = require('fs');
 
 const path = require('path');
-
-const {
-  execSync
-} = require('child_process');
 
 const directory = path.join(process.cwd(), '../../src/stories');
 const storybookMainJs = path.join(process.cwd(), '../../.storybook/main.js');
@@ -47,13 +45,13 @@ const applyStorybookChanges = () => {
     });
   });
   /**
-  * Append a line that requires working config from the package to main.js
+  * Append a line that requires working config into main.js
   */
 
   const data = fs.readFileSync(storybookMainJs); // read existing contents into data
 
   const fileDescriptor = fs.openSync(storybookMainJs, 'w+');
-  const buffer = new Buffer.from('const webpackConfig = require("../node_modules/scandipwa-storybook");\n\n');
+  const buffer = new Buffer.from('const webpackConfig = require("../node_modules/scandipwa-storybook-plugin");\n\n');
   fs.writeSync(fileDescriptor, buffer, 0, buffer.length, 0); // write new data
 
   fs.writeSync(fileDescriptor, data, 0, data.length, buffer.length); // append old data
@@ -70,5 +68,5 @@ const applyStorybookChanges = () => {
 if (fs.existsSync(storybookMainJs)) {
   applyStorybookChanges();
 } else {
-  throw 'Make sure you have Storybook installed. Install it by running: npx sb init';
+  throw 'Make sure you have Storybook installed. Install it by running: npx sb init.\n Then install scandipwa-storybook again.';
 }
