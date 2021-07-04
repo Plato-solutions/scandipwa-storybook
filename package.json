@@ -39,7 +39,6 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "create-package": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files",
-    "preinstall": "node dist/preinstall.js",
     "postinstall": "node dist/postinstall.js"
   },
   "browserslist": {
