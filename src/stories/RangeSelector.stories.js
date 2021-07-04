@@ -8,13 +8,12 @@ export default {
     component: RangeSelector
 };
 
-/** @namespace ScandipwaStorybook/Stories/RangeSelector/Stories/Template */
-export const Template = (args) => <RangeSelector { ...args } />;
-
-export const RangeSelectorDefault = Template.bind({});
-RangeSelectorDefault.args = {
-    value: 14,
-    minValue: 1,
-    maxValue: 20,
-    onChangeComplete: () => {}
+/** @namespace sbScandiFresh/Stories/RangeSelector/Stories/RangeSelectorDefault */
+export const RangeSelectorDefault = () => {
+    <RangeSelector
+      value={ 14 }
+      minvalue={ 1 }
+      maxValue={ 20 }
+      onChangeComplete={ null }
+    />;
 };
