@@ -1,0 +1,67 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "jsx": "react",
+        "paths": {
+            "SourceStyle/*": [
+                "node_modules/@scandipwa/scandipwa/src/style/*"
+            ],
+            "SourceComponent/*": [
+                "node_modules/@scandipwa/scandipwa/src/component/*"
+            ],
+            "SourceRoute/*": [
+                "node_modules/@scandipwa/scandipwa/src/route/*"
+            ],
+            "SourceStore/*": [
+                "node_modules/@scandipwa/scandipwa/src/store/*"
+            ],
+            "SourceUtil/*": [
+                "node_modules/@scandipwa/scandipwa/src/util/*"
+            ],
+            "SourceQuery/*": [
+                "node_modules/@scandipwa/scandipwa/src/query/*"
+            ],
+            "SourceType/*": [
+                "node_modules/@scandipwa/scandipwa/src/type/*"
+            ],
+            "Source/*": [
+                "node_modules/@scandipwa/scandipwa/src/*"
+            ],
+            "Style/*": [
+                "node_modules/@scandipwa/scandipwa/src/style/*",
+                "src/style/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/style/*"
+            ],
+            "Component/*": [
+                "node_modules/@scandipwa/scandipwa/src/component/*",
+                "src/component/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/component/*"
+            ],
+            "Route/*": [
+                "node_modules/@scandipwa/scandipwa/src/route/*",
+                "src/route/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/route/*"
+            ],
+            "Store/*": [
+                "node_modules/@scandipwa/scandipwa/src/store/*",
+                "src/store/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/store/*"
+            ],
+            "Util/*": [
+                "node_modules/@scandipwa/scandipwa/src/util/*",
+                "src/util/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/util/*"
+            ],
+            "Query/*": [
+                "node_modules/@scandipwa/scandipwa/src/query/*",
+                "src/query/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/query/*"
+            ],
+            "Type/*": [
+                "node_modules/@scandipwa/scandipwa/src/type/*",
+                "src/type/*",
+                "node_modules/@tilework/mosaic-cra-scripts/src/type/*"
+            ]
+        }
+    }
+}
