@@ -1,9 +1,7 @@
 # scandipwa-storybook-plugin
 
 ## Powered by:
-<p align="center">
-  <a href="https://www.platosolutions.io/"><img src="https://i.ibb.co/w4v9g9d/Plato-Logo.png" alt="Plato logo"></a>
-</p>
+[![Platosolutions](https://i.ibb.co/w4v9g9d/Plato-Logo.png)](https://www.platosolutions.io)
 
 ## Installation
 
