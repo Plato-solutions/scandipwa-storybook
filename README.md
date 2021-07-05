@@ -15,17 +15,18 @@
 ---
 
 #### In case you dont have any of this requirements -- follow the instructions:
-
 - Install NodeJS: [here](https://nodejs.org/en/download/)
 
 - Create a ScandiPWA project following the [instructions](https://docs.scandipwa.com/quick-start-guide)
 
-- Add Storybook to your ScandiPWA project using [this](https://storybook.js.org/docs/react/get-started/install)
+- Add Storybook to your ScandiPWA project(root directory) using [this](https://storybook.js.org/docs/react/get-started/install)
 
-#### After you have all this installed -- add scandipwa-storybook-plugin to your project running the:
+> Note: ScandiPWA and Storybook will NOT work until you install the plugin. A manual on the plugin installation is listed down below.
+
+#### After you have all this installed -- add `scandipwa-storybook-plugin` to your project by running:
 
 ##### For npm:
-`npm install scandipwa-storybook-plugin`
+`npm install scandipwa-storybook-plugin --save`
 
 ##### For yarn:
 `yarn add scandipwa-storybook-plugin`
@@ -44,13 +45,24 @@ Run `scandipwa override component <scandipwa_component>` script in a console. It
 
 > Replace <scandipwa_component> with the component name defined inside the ScandiPWA component library
 
+**Example:**
+
+1. Run `scandipwa override component RangeSelector` in a console
+2. Choose things to extend in RangeSelector.component.js: Select RangeSelector by pressing <space>
+3. What would you like to do with styles?
+*Keep* - use predefined styling;
+*Extend* - use predefined styling with ability to apply a new ones;
+*Override* - Create a completely new styling file without keeping predefined ones.
+
 #### Create a story for a component
 
-Inside your `src/stories` directory create a file `<scandipwa_component>.stories.js`. From this point you're good to go.
+Inside your `src/stories` directory create a file `<scandipwa_component>.stories.js`. Test your component by writting an apropriate story for it. From this point you're good to go.
 
 Run `yarn storybook` or `npm run storybook` script to start your Storybook UI.
 
 ### Story example
+
+> Note: Replace <root_dirname> placeholder inside component and stories files to whatever root directory name you have in camelcase. **For example:** scandi-storybook-project -> ScandiStorybookProject
 
 `src/component/RangeSelector/RangeSelector.component.js`:
 
@@ -59,12 +71,13 @@ import {
     RangeSelector as SourceRangeSelector
 } from 'SourceComponent/RangeSelector/RangeSelector.component';
 
-/** @namespace ScandipwaStorybook/Component/RangeSelector/Component/RangeSelectorComponent */
+/** @namespace <root_dirname>/Component/RangeSelector/Component/RangeSelectorComponent */
 export class RangeSelectorComponent extends SourceRangeSelector {
     // TODO implement logic
 }
 
 export default RangeSelectorComponent;
+
 ```
 
 `src/stories/RangeSelector.stories.js`:
@@ -80,7 +93,7 @@ export default {
     component: RangeSelector
 };
 
-/** @namespace ScandiLibTest/Stories/RangeSelector/Stories/RangeSelectorDefault */
+/** @namespace <root_dirname>/Stories/RangeSelector/Stories/RangeSelectorDefault */
 export const RangeSelectorDefault = () => (
   <RangeSelector
     value={ 14 }
@@ -89,6 +102,7 @@ export const RangeSelectorDefault = () => (
     onChangeComplete={ null }
   />
 );
+
 ```
 
 #### The output of the Storybook UI:
@@ -99,7 +113,7 @@ export const RangeSelectorDefault = () => (
 
 ### Troubleshouting
 
-You may have an error related to webpack-i18n-import-loader. This one is currently under resolving.
+You may have an error related to `webpack-i18n-import-loader`. This one is currently under resolving.
 
 <p align="center">
   <img src="https://i.ibb.co/YD3Yxsy/webpack-i18n-import-loader.png" alt="i18n-error">

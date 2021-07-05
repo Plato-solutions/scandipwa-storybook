@@ -1,6 +1,6 @@
 {
   "name": "scandipwa-storybook-plugin",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": "OSL-3.0",
   "private": false,
   "main": "dist/index.js",
