@@ -21,7 +21,7 @@
 
 - Add Storybook to your ScandiPWA project(root directory) using [this](https://storybook.js.org/docs/react/get-started/install)
 
-> Note: ScandiPWA and Storybook will NOT work until you install the plugin. A manual on the plugin installation is listed down below.
+> **Note**: ScandiPWA and Storybook will NOT work until you install the plugin. A manual on the plugin installation is listed down below.
 
 #### After you have all this installed -- add `scandipwa-storybook-plugin` to your project by running:
 
@@ -39,7 +39,7 @@ To add a Scandipwa component to your Storybook UI -- use the example below:
 
 #### Override ScandiPWA component
 
-> Note: you must have Scandipwa CLI be installed to be able to override components from console. In order you don't have one -- install it or override component manually.
+> **Note**: you must have Scandipwa CLI be installed to be able to override components from console. In order you don't have one -- install it or override component manually.
 
 Run `scandipwa override component <scandipwa_component>` script in a console. It will create a component directory inside your src folder.
 
@@ -62,7 +62,7 @@ Run `yarn storybook` or `npm run storybook` script to start your Storybook UI.
 
 ### Story example
 
-> Note: Replace <root_dirname> placeholder inside component and stories files to whatever your root directory name is in camelcase. **For example:** scandi-storybook-project -> ScandiStorybookProject
+> **Note**: Replace <root_dirname> placeholder inside component and stories files to whatever your root directory name is in camelcase. **For example:** scandi-storybook-project -> ScandiStorybookProject
 
 `src/component/RangeSelector/RangeSelector.component.js`:
 
@@ -104,6 +104,8 @@ export const RangeSelectorDefault = () => (
 );
 
 ```
+
+> **Note**: Copying the code might cause an issue with eslint rules defined by ScandiPWA. The conflicts are mostly appears in spacing. To resolve them, please use any ESLint extention for your IDE that allow to spectate and fix the issues automatically.
 
 #### The output of the Storybook UI:
 
