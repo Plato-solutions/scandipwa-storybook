@@ -62,7 +62,7 @@ Run `yarn storybook` or `npm run storybook` script to start your Storybook UI.
 
 ### Story example
 
-> Note: Replace <root_dirname> placeholder inside component and stories files to whatever your root directory name id in camelcase. **For example:** scandi-storybook-project -> ScandiStorybookProject
+> Note: Replace <root_dirname> placeholder inside component and stories files to whatever your root directory name is in camelcase. **For example:** scandi-storybook-project -> ScandiStorybookProject
 
 `src/component/RangeSelector/RangeSelector.component.js`:
 
