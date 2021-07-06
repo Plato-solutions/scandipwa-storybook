@@ -56,7 +56,7 @@ Run `scandipwa override component <scandipwa_component>` script in a console. It
 
 Inside your `src/stories` directory create a file `<scandipwa_component>.stories.js`. Test your component by writting an apropriate story for it. From this point you're good to go.
 
-Forour previous example create a file named `RangeSelector.stories.js`.
+In the case of our previous example the file would be named `RangeSelector.stories.js`.
 
 Run `yarn storybook` or `npm run storybook` script to start your Storybook UI.
 
