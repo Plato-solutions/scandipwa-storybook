@@ -8,5 +8,5 @@ export default {
     component: Logo
 };
 
-/** @namespace ScandipwaStorybook/Stories/Logo/Stories/Template */
+/** @namespace ScandipwaStorybookPlugin/Stories/Logo/Stories/Template */
 export const Template = (args) => <Logo { ...args } />;

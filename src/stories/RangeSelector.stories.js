@@ -8,12 +8,12 @@ export default {
     component: RangeSelector
 };
 
-/** @namespace sbScandiFresh/Stories/RangeSelector/Stories/RangeSelectorDefault */
-export const RangeSelectorDefault = () => {
+/** @namespace ScandipwaStorybookPlugin/Stories/RangeSelector/Stories/RangeSelectorDefault */
+export const RangeSelectorDefault = () => (
     <RangeSelector
       value={ 14 }
-      minvalue={ 1 }
+      minValue={ 1 }
       maxValue={ 20 }
       onChangeComplete={ null }
-    />;
-};
+    />
+);
