@@ -35,7 +35,7 @@
 
 To add a Scandipwa component to your Storybook UI -- use the example below:
 
-#### Override ScandiPWA component
+#### Step 1: Override ScandiPWA component
 
 > **Note**: you must have Scandipwa CLI be installed to be able to override components from console. In order you don't have one -- install it or override component manually.
 
@@ -52,15 +52,17 @@ Run `scandipwa override component <scandipwa_component>` script in a console. It
 *Extend* - use predefined styling with ability to apply a new ones;
 *Override* - Create a completely new styling file without keeping predefined ones.
 
-#### Create a story for a component
+#### Step 2: Create a story for a component
 
 Inside your `src/stories` directory create a file `<scandipwa_component>.stories.js`. Test your component by writting an apropriate story for it. From this point you're good to go.
+
+Forour previous example create a file named `RangeSelector.stories.js`.
 
 Run `yarn storybook` or `npm run storybook` script to start your Storybook UI.
 
 ### Story example
 
-> **Note**: Replace <root_dirname> placeholder inside component and stories files to whatever your root directory name is in camelcase. **For example:** scandi-storybook-project -> ScandiStorybookProject
+> **Note**: Replace <root_dirname> placeholder inside component and stories files to whatever your root directory name is in CamelCase. **For example:** scandi-storybook-project -> ScandiStorybookProject
 
 `src/component/RangeSelector/RangeSelector.component.js`:
 
@@ -103,7 +105,7 @@ export const RangeSelectorDefault = () => (
 
 ```
 
-> **Note**: Copying the code might cause an issue with eslint rules defined by ScandiPWA. The conflicts are mostly appears in spacing. To resolve them, please use any ESLint extention for your IDE that allow to spectate and fix the issues automatically.
+> **Note**: Copying the code might cause an issue with eslint rules defined by ScandiPWA. The conflicts are mostly spacing issues. To solve them, please use any ESLint extension for your IDE that allow to spectate and fix the issues automatically. Also make sure you have one empty line at the end of your file.
 
 #### The output of the Storybook UI:
 
