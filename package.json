@@ -1,12 +1,12 @@
 {
   "name": "scandipwa-storybook-plugin",
-  "version": "0.0.6",
+  "version": "0.1.0-rc.0",
   "license": "OSL-3.0",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "files": [
-    "dist"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -19,13 +19,11 @@
     "@scandipwa/scandipwa": "4.4.0",
     "@scandipwa/scandipwa-scripts": "2.4.8",
     "@tilework/mosaic": "0.1.2",
-    "colors": "^1.4.0",
     "esserializer": "^1.0.6",
     "npm": "^7.19.1",
     "react-scripts": "^4.0.3",
     "serialijse": "^0.3.0",
     "serialize-javascript": "^6.0.0",
-    "shelljs": "^0.8.4",
     "workbox-webpack-plugin": "^6.1.5"
   },
   "scandipwa": {
@@ -40,7 +38,8 @@
     "build": "scandipwa-scripts build",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "create-package": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files"
+    "create-package": "rm -rf dist && NODE_ENV=production babel lib --out-dir dist --copy-files",
+    "postinstall": "node lib/postinstall.js"
   },
   "browserslist": {
     "production": [
