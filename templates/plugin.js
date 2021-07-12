@@ -5,7 +5,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const originalCWD = process.cwd();
 process.chdir(\`\${originalCWD}/node_modules/@tilework/mosaic-cra-scripts\`);
 
-const { createWebpackDevConfig } = require('@craco/craco');
+const { createWebpackDevConfig } = require('@scandipwa/craco');
 
 const { findArgsFromCli } = require('@tilework/mosaic-craco/lib/args');
 

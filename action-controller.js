@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const shell = require('shelljs');
 const colors = require('colors');
 
 const templates = require('./templates/template');
@@ -103,8 +104,19 @@ const overrideExistingSbConfig = () => {
     });
 };
 
+const installPackages = () => {
+    return new Promise(resolve=>{
+      console.log("\nInstalling workbox-webpack-plugin\n".cyan)
+      shell.exec(`yarn add workbox-webpack-plugin`, () => {
+        console.log("\n✓ Package installed.".green)
+        resolve()
+      })
+    })
+  }
+
 module.exports = {
     removeStories,
     configurateMainJs,
-    overrideExistingSbConfig
+    overrideExistingSbConfig,
+    installPackages
 };
