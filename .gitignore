@@ -10,4 +10,4 @@ yarn-error.log*
 /.changelog
 .npm/
 yarn.lock
-/node_modules/
+node_modules
