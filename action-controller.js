@@ -5,8 +5,10 @@ const colors = require('colors');
 
 const templates = require('./templates/template');
 
+
+const storybookDir = '/.storybook';
 const directory = path.join(process.cwd(), '/src/stories');
-const storybookMainJs = path.join(process.cwd(), '/.storybook/main.js');
+const storybookMainJs = path.join(process.cwd(), `${storybookDir}/main.js`);
 const defaultStories = [
     'button.css',
     'Button.jsx',
@@ -21,6 +23,21 @@ const defaultStories = [
 ];
 
 /**
+ * Check whether Storybook is already installed in project
+ */
+
+const isStorybookExists = () => {
+    return new Promise((resolve) => {
+        if (fs.existsSync(storybookMainJs)) {
+            resolve(true);
+        } else {
+            console.log('✗ Seems like storybook is not installed in your project.'.red)
+            resolve(false);
+        }
+    })
+}
+
+/**
 * Delete all predefined stories by Storybook to exclude eslint issues
 */
 
@@ -29,7 +46,6 @@ const removeStories = () => {
     return new Promise((resolve) => {
         fs.readdir(directory, (err, files) => {
             if (err) {
-                resolve(false);
                 throw err;
             }
             files.map((file) => {
@@ -37,7 +53,6 @@ const removeStories = () => {
                     fs.unlink(path.join(directory, file), (err) => {
                         if (err) {
                             console.log('✗ Something went wrong.'.red);
-                            resolve(false);
                             throw err;
                         }
                     });
@@ -45,7 +60,7 @@ const removeStories = () => {
             });
         });
         console.log('✓ All stories removed successfully.'.green);
-        resolve(true);
+        resolve();
     });
 };
 
@@ -115,6 +130,7 @@ const installPackages = () => {
   }
 
 module.exports = {
+    isStorybookExists,
     removeStories,
     configurateMainJs,
     overrideExistingSbConfig,
