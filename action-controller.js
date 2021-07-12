@@ -31,7 +31,8 @@ const isStorybookExists = () => {
         if (fs.existsSync(storybookMainJs)) {
             resolve(true);
         } else {
-            console.log('✗ Seems like storybook is not installed in your project.'.red)
+            console.log('✗ Seems like storybook is not installed in your project. Install it by running:\n'.red);
+            console.log('npx sb init\n'.green);
             resolve(false);
         }
     })
