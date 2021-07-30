@@ -6,7 +6,6 @@ import { MemoryRouter } from 'react-router';
 import injectStaticReducers from '@scandipwa/scandipwa/src/store';
 import { getStore } from '@scandipwa/scandipwa/src/util/Store';
 
-/** @namespace ScandiLibTest/Provider/ProviderWrapper */
 export const ProviderWrapper = ({ children }) => {
     const store = getStore();
     injectStaticReducers(store);
