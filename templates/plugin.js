@@ -7,11 +7,6 @@ process.chdir(\`\${originalCWD}/node_modules/@tilework/mosaic-cra-scripts\`);
 
 const { createWebpackDevConfig } = require('@scandipwa/craco');
 
-const { findArgsFromCli } = require('@tilework/mosaic-craco/lib/args');
-
-// Make sure this is called before "paths" is imported.
-findArgsFromCli();
-
 const { getCraPaths } = require('@tilework/mosaic-craco/lib/cra');
 
 const { overrideWebpackDev } = require('@tilework/mosaic-craco/lib/features/webpack/override');
