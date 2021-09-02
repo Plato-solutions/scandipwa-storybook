@@ -1,5 +1,5 @@
 module.exports = `/* eslint-disable react/prop-types */
-import React from 'react';
+import React, {Suspense} from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
 
@@ -10,9 +10,11 @@ export const ProviderWrapper = ({ children }) => {
     const store = getStore();
     injectStaticReducers(store);
     return (
-        <MemoryRouter initialEntries={ ['/'] }>
-            <Provider store={ store } key="redux">{ children }</Provider>
-        </MemoryRouter>
+        <Suspense fallback={"Loading..."}>
+            <MemoryRouter initialEntries={ ['/'] }>
+                <Provider store={ store } key="redux">{ children }</Provider>
+            </MemoryRouter>
+        </Suspense>
     );
 };
 
