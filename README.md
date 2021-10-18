@@ -23,11 +23,8 @@
 
 #### After you have all this installed -- add `scandipwa-storybook-plugin` to your project by running:
 
-##### For npm:
-`npm install scandipwa-storybook-plugin --save`
-
-##### For yarn:
-`yarn add scandipwa-storybook-plugin`
+##### Installation:
+`npx scandipwa-storybook-plugin`
 
 > The plugin will grab all the necessary configuration for you project and inject it into main.js file inside your .storybook directory. The configuration consists of the complete craco config returned from ScandiPWA.
 
