@@ -6,7 +6,8 @@
 ## Installation
 
 ### Requirements:
-- NodeJS v10.0+ is required;
+- NodeJS v14+ is required;
+> **Important**: *node-sass* package is causing issues with the Node version 16+.
 - ScandiPWA Application is required underneath;
 - Storybook v6.0+ is required.
 
