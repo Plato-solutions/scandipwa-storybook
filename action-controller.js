@@ -123,7 +123,7 @@ const overrideExistingSbConfig = () => {
 const installPackages = () => {
     return new Promise(resolve=>{
       console.log("\nInstalling workbox-webpack-plugin\n".cyan)
-      shell.exec(`yarn add workbox-webpack-plugin@5.4.1`, () => {
+      shell.exec(`yarn add workbox-webpack-plugin@5.1.4`, () => {
         console.log("\n✓ Package installed.".green)
         resolve()
       })
