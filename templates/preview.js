@@ -21,7 +21,7 @@ const parameters = {
     }
 };
 
-window.storeList = ['a', 'b'];
+window.storeList = ['default'];
 window.storeRegexText = '\\s';
 window.contentConfiguration = {};
 
