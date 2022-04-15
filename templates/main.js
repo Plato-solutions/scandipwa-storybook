@@ -11,6 +11,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app"
   ],
+  "framework": '@storybook/react',
   webpackFinal: async (config, { configType }) => {
     config.plugins.push(
       new webpack.DefinePlugin({

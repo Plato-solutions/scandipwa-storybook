@@ -23,6 +23,7 @@ const parameters = {
 
 window.storeList = ['a', 'b'];
 window.storeRegexText = '\\s';
+window.contentConfiguration = {};
 
 module.exports = {
     decorators,
