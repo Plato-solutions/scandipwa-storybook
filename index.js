@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 
-const { isStorybookExists, removeStories, overrideExistingSbConfig, installPackages } = require('./action-controller');
+const {
+    removeStories,
+    overrideExistingSbConfig,
+    installPackages
+} = require('./src/action-controller');
+const { isValidProject } = require('./src/validations');
 
 const run = async () => {
-    let success = await isStorybookExists();
-    if(success) {
+    const isValid = await isValidProject();
+    if(isValid) {
         await removeStories()
-        // await configurateMainJs();
         await overrideExistingSbConfig();
         await installPackages();
         console.log("All done".green);

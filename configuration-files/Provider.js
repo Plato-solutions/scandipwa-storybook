@@ -1,4 +1,4 @@
-module.exports = `/* eslint-disable react/prop-types */
+/* eslint-disable react/prop-types */
 import React, {Suspense} from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router';
@@ -18,4 +18,4 @@ export const ProviderWrapper = ({ children }) => {
     );
 };
 
-export default Provider;`;
+export default Provider;

@@ -1,4 +1,4 @@
-module.exports = `const webpackConfig = require("./storybook-plugin");
+const webpackConfig = require("./storybook-plugin");
 const webpack = require('webpack');
 
 module.exports = {
@@ -24,4 +24,4 @@ module.exports = {
 
     return config;
   }
-}`
+}

@@ -1,9 +1,9 @@
-module.exports = `//* eslint-disable max-len */
+//* eslint-disable max-len */
 /* eslint-disable @scandipwa/scandipwa-guidelines/export-level-one */
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const originalCWD = process.cwd();
-process.chdir(\`\${originalCWD}/node_modules/@tilework/mosaic-cra-scripts\`);
+process.chdir(`${originalCWD}/node_modules/@tilework/mosaic-cra-scripts`);
 
 const { initialize } = require('@tilework/mosaic-craco/scripts/script');
 
@@ -22,4 +22,3 @@ const config = craco.then(
 );
 
 module.exports = config;
-`;

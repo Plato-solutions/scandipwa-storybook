@@ -1,4 +1,4 @@
-module.exports = `/* eslint-disable @scandipwa/scandipwa-guidelines/export-level-one */
+/* eslint-disable @scandipwa/scandipwa-guidelines/export-level-one */
 const { ProviderWrapper } = require('./Provider');
 
 require('./globals.scss');
@@ -29,4 +29,3 @@ module.exports = {
     decorators,
     parameters
 };
-`;

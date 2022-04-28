@@ -1,12 +1,12 @@
 {
   "name": "scandipwa-storybook-plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "private": false,
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/plato2/foundry/app/scandipwa-storybook"
+    "url": "git+https://github.com/Plato-solutions/scandipwa-storybook.git"
   },
   "bin": {
     "scandipwa-storybook-plugin": "index.js"
