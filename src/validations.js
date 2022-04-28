@@ -10,7 +10,7 @@ const storybookMainJs = path.join(process.cwd(), `${storybookDir}/main.js`);
  */
 
 const isStorybookExists = () => {
-	return new Promise((resolve) => {
+	return new Promise((resolve, reject) => {
 		if (fs.existsSync(storybookMainJs)) {
 			resolve(true);
 		} else {
